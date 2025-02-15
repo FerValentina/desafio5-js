@@ -1,7 +1,7 @@
 let tasks = [
-    { id: 16, description: "Hacer mercado", completed: true },
+    { id: 16, description: "Hacer compras", completed: true },
     { id: 60, description: "Estudiar para la prueba", completed: false },
-    { id: 24, description: "Sacar a pasear a Tobby", completed: false }
+    { id: 24, description: "Sacar a pasear al perritogit ", completed: false }
 ];
 
 // Función para renderizar la lista de tareas en la página
