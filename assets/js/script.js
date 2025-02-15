@@ -1,7 +1,7 @@
 let tasks = [
     { id: 16, description: "Hacer compras", completed: true },
     { id: 60, description: "Estudiar para la prueba", completed: false },
-    { id: 24, description: "Sacar a pasear al perritogit ", completed: false }
+    { id: 24, description: "Sacar a pasear al perrito", completed: false }
 ];
 
 // Función para renderizar la lista de tareas en la página
@@ -41,7 +41,7 @@ function addTask() {
     }
 
     const newTask = {
-        id: Math.floor(Math.random() * 1000), // Generar un ID único
+        id: Math.floor(Math.random() * 100), // Generar un ID único
         description: taskDescription,
         completed: false
     };
