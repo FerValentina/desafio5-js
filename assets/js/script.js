@@ -1,16 +1,16 @@
 let tasks = [
-    { id: 16, description: "Hacer compras", completed: true },
-    { id: 60, description: "Estudiar para la prueba", completed: false },
-    { id: 24, description: "Sacar a pasear al perrito", completed: false }
+    { id: 01, description: "Hacer compras", completed: true },
+    { id: 02, description: "Estudiar para la prueba", completed: false },
+    { id: 03, description: "Sacar a pasear al perrito", completed: false }
 ];
 
-// Función para renderizar la lista de tareas en la página
+
 function renderTasks() {
     const taskTable = document.getElementById("taskTable");
     const totalTasks = document.getElementById("totalTasks");
     const completedTasks = document.getElementById("completedTasks");
 
-    taskTable.innerHTML = ""; // Limpiar la tabla antes de volver a llenarla
+    taskTable.innerHTML = ""; 
 
     tasks.forEach(task => {
         let row = document.createElement("tr");
@@ -25,12 +25,12 @@ function renderTasks() {
         taskTable.appendChild(row);
     });
 
-    // Actualizar contadores
+    
     totalTasks.textContent = tasks.length;
     completedTasks.textContent = tasks.filter(task => task.completed).length;
 }
 
-// Función para agregar una nueva tarea
+
 function addTask() {
     const taskInput = document.getElementById("taskInput");
     const taskDescription = taskInput.value.trim();
@@ -41,23 +41,23 @@ function addTask() {
     }
 
     const newTask = {
-        id: Math.floor(Math.random() * 100), // Generar un ID único
+        id: Math.floor(Math.random() * 20), 
         description: taskDescription,
         completed: false
     };
 
     tasks.push(newTask);
-    taskInput.value = ""; // Limpiar el input
+    taskInput.value = ""; 
     renderTasks();
 }
 
-// Función para eliminar una tarea
+
 function deleteTask(taskId) {
     tasks = tasks.filter(task => task.id !== taskId);
     renderTasks();
 }
 
-// Función para marcar/desmarcar una tarea como completada
+
 function toggleTask(taskId) {
     tasks = tasks.map(task =>
         task.id === taskId ? { ...task, completed: !task.completed } : task
@@ -65,5 +65,5 @@ function toggleTask(taskId) {
     renderTasks();
 }
 
-// Renderizar tareas iniciales
+
 renderTasks();
