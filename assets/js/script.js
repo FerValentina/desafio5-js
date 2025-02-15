@@ -1,7 +1,7 @@
 let tasks = [
-    { id: 01, description: "Hacer compras", completed: true },
-    { id: 02, description: "Estudiar para la prueba", completed: false },
-    { id: 03, description: "Sacar a pasear al perrito", completed: false }
+    { id: 10, description: "Hacer compras", completed: true },
+    { id: 75, description: "Estudiar para la prueba", completed: false },
+    { id: 90, description: "Sacar a pasear al perrito", completed: false }
 ];
 
 
@@ -41,7 +41,7 @@ function addTask() {
     }
 
     const newTask = {
-        id: Math.floor(Math.random() * 20), 
+        id: Math.floor(Math.random() * 100), 
         description: taskDescription,
         completed: false
     };
