@@ -49,7 +49,11 @@ button {
     color: gray;
 }
 .delete {
-    background-color: red;
-    padding: 5px;
+    background-color: rgb(202, 2, 2);
+    border-radius: 5px;
+    padding: 3px;
+    padding-left: 6px ;
+    padding-right: 6px ;
     cursor: pointer;
+    
 }
